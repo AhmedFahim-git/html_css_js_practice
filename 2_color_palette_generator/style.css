@@ -1,0 +1,104 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: Roboto, Arial, Helvetica, sans-serif;
+	display: flex;
+	/* flex-direction: column; */
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: linear-gradient(to top left, white, #98aaee);
+	/* padding: 12px 18px; */
+}
+#project-container {
+	/* height: 15rem; */
+	background-color: white;
+	padding: 2rem;
+	border-radius: 1rem;
+	box-shadow: 0 10px 25px rgb(0 0 0 / 30%);
+	width: min(42.5rem, 95%);
+}
+h1 {
+	text-align: center;
+	position: relative;
+}
+h1::after {
+	transform: translate(-50%, 0);
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	width: 50%;
+	height: 0.15rem;
+	background-color: purple;
+	border-radius: 0.1rem;
+	/* color: black; */
+}
+/* #underline-container { */
+/* 	display: flex; */
+/* 	justify-content: center; */
+/* } */
+/* #heading-underline { */
+/* 	width: min(19rem, 70vw); */
+/* 	height: 2px; */
+/* 	background-color: purple; */
+/* } */
+button {
+	background: linear-gradient(to right, #451fff, #9e00ff);
+	color: white;
+	font-weight: bold;
+	font-size: 1rem;
+	padding: 0.8rem;
+	border-radius: 2rem;
+	border: none;
+	margin-top: 2rem;
+}
+button:hover {
+	cursor: pointer;
+	transform: translate(0, -0.2rem);
+	box-shadow: 0 0.2rem 0.5rem 0.05rem rgb(0 0 0 / 70%);
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+}
+buttton:active {
+	transform: translate(0, 0.2rem);
+}
+#all-palette-container {
+	/* display: flex; */
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+	justify-content: center;
+	gap: 0.5rem;
+	margin-top: 2rem;
+	/* flex-flow: row wrap; */
+}
+.palette-overall-div {
+	/* width: 6rem; */
+	border-radius: 0.5rem 0.5rem 0 0;
+	font-weight: bold;
+	/* color: darkgrey; */
+}
+.palette-overall-div:hover {
+	transform: scale(1.05) translate(0, -4px);
+	box-shadow: 0 3px 3px 2px rgb(0 0 0 / 50%);
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+}
+.palette-color-div {
+	height: 6rem;
+	border-radius: 0.5rem 0.5rem 0 0;
+}
+.palette-bottom-section {
+	display: flex;
+	font-size: 0.9rem;
+	justify-content: space-between;
+	padding: 0.3rem;
+}
+.color-palette-symbol {
+	color: #878787;
+}
