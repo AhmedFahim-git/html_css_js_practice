@@ -1,0 +1,132 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	display: grid;
+	margin: 0;
+	min-height: 100vh;
+	justify-items: center;
+	align-items: center;
+	background-color: beige;
+	font-family: Arial, Helvetica, sans-serif;
+}
+section {
+	border-radius: 2rem;
+	background-color: white;
+	/* border: thin dotted red; */
+	padding: 2rem;
+	box-shadow: 0.1px 0.1px 5px 0.05px grey;
+	justify-items: center;
+	align-items: center;
+	min-width: 35rem;
+}
+section > * {
+	margin: 0;
+}
+h1 {
+	color: darkorange;
+}
+button {
+	padding: 0.7rem;
+	border-radius: 0.2rem;
+}
+button:hover {
+	cursor: pointer;
+}
+section.start button,
+section.result-section button {
+	font-weight: bold;
+	font-size: 1.1em;
+	color: white;
+	background-color: darkorange;
+}
+section.start button:hover:not(:disabled),
+section.start button:focus:not(:disabled),
+section.result-section button:hover:not(:disabled),
+section.result-section button:focus:not(:disabled) {
+	background-color: orangered;
+}
+section.question-section button {
+	background-color: beige;
+	border-radius: 0.5rem;
+}
+section.question-section button:hover:not(:disabled),
+section.question-section button:focus:not(:disabled) {
+	background-color: wheat;
+}
+/* button:hover:not(:disabled), */
+/* button:focus:not(:disabled) { */
+/* 	background-color: grey; */
+/* } */
+section.start {
+	display: grid;
+	row-gap: 1.5rem;
+}
+section.question-section {
+	/* min-width: 30rem; */
+	display: none;
+	grid-template-columns: 50% 50%;
+	justify-items: center;
+	row-gap: 1.5rem;
+}
+section.question-section > h2.question-text {
+	grid-column: 1 / -1;
+}
+h2.result-comment {
+	color: darkorange;
+}
+.result-container {
+	width: 90%;
+	background-color: orange;
+	border-radius: 1rem;
+}
+section.question-section .question-number-div {
+	justify-self: start;
+}
+section.question-section .score-div {
+	justify-self: end;
+}
+section.question-section > ul {
+	list-style-type: none;
+	padding: 0;
+	grid-column: 1 / -1;
+	width: 100%;
+	display: grid;
+	row-gap: 0.2rem;
+}
+section.question-section > ul * {
+	width: 100%;
+}
+/* section.question-section > * { */
+/* 	border: thin dotted red; */
+/* } */
+.question-options button {
+	text-align: left;
+}
+.progress-bar {
+	grid-column: 1 / -1;
+	display: grid;
+	grid-template-columns: 20% 1fr;
+	width: 100%;
+	height: 1rem;
+}
+.filled-bar {
+	background-color: orange;
+}
+.unfilled-bar {
+	background-color: beige;
+}
+section.result-section {
+	display: none;
+	justify-items: center;
+	row-gap: 0.7rem;
+}
+section.result-section > * {
+	/* border: thin dotted red; */
+	margin: 0;
+}
+.result-section > div {
+	display: grid;
+	justify-items: center;
+	padding: 1rem;
+}

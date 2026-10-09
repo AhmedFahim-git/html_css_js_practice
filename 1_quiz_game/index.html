@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+    <title>Quiz Game</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <article>
+      <section class="start">
+        <h1>Quiz Time</h1>
+        <p>Test your knowledge with these fun questions</p>
+        <button
+          type="button"
+          id="start-quiz"
+          onclick="start_quiz('section.start')"
+        >
+          Start Quiz
+        </button>
+      </section>
+      <section class="question-section">
+        <h2 class="question-text"></h2>
+        <div class="question-number-div">
+          Question <span class="question-number"></span> of 5
+        </div>
+        <div class="score-div">Score: <span class="score-value"></span></div>
+        <ul class="question-options">
+          <li>
+            <button
+              type="button"
+              id="option-0"
+              onclick="select_option(0)"
+            ></button>
+          </li>
+          <li>
+            <button
+              type="button"
+              id="option-1"
+              onclick="select_option(1)"
+            ></button>
+          </li>
+          <li>
+            <button
+              type="button"
+              id="option-2"
+              onclick="select_option(2)"
+            ></button>
+          </li>
+          <li>
+            <button
+              type="button"
+              id="option-3"
+              onclick="select_option(3)"
+            ></button>
+          </li>
+        </ul>
+        <div class="progress-bar">
+          <div class="filled-bar"></div>
+          <div class="unfilled-bar"></div>
+        </div>
+      </section>
+      <section class="result-section">
+        <h1>Quiz Results</h1>
+        <div class="result-container">
+          <div class="result-score">
+            You scored <span class="score-value"></span> out of 5
+          </div>
+          <h2 class="result-comment"></h2>
+        </div>
+        <button
+          type="button"
+          id="restart-quiz"
+          onclick="start_quiz('section.result-section')"
+        >
+          Restart Quiz
+        </button>
+      </section>
+    </article>
+  </body>
+</html>
