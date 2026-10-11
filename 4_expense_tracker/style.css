@@ -1,0 +1,220 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: linear-gradient(to bottom right, #005200, #afe7ab);
+	padding: 20px 2px;
+}
+#container {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	border-radius: 15px;
+	padding: 12px 9px 9px;
+	width: 40rem;
+	align-items: center;
+	box-shadow: 2px 2px 5px rgb(0 0 0 / 20%);
+}
+#main-title {
+	margin: 1.2rem auto;
+	font-size: 1.7rem;
+	text-align: center;
+}
+#overall-section {
+	background: linear-gradient(to top left, #2b4e00, #c3dfc1);
+	width: 100%;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 15px;
+}
+#overall-balance-label {
+	font-size: 0.9rem;
+}
+.income-expense-label {
+	font-size: 0.8rem;
+}
+#overall-balance-value {
+	margin-top: 15px;
+}
+#income-expense-div-cont {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+	width: 100%;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 15px;
+}
+.income-expense-div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: white;
+	border-radius: 4px;
+	padding: 10px 0;
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+}
+.income-expense-div:hover {
+	transform: translate(0, -3px);
+	box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
+}
+.income-expense-div.income {
+	color: #007e00;
+}
+.income-expense-div.expense {
+	color: #cc0000;
+}
+.income-expense-value {
+	margin-top: 8px;
+}
+#bottom-section {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+	width: 100%;
+	gap: 15px;
+	margin-top: 18px;
+}
+.bottom-section-section {
+	height: 20rem;
+	margin-top: 10px;
+	padding-bottom: 15px;
+}
+#transaction-list {
+	list-style: none;
+	overflow: auto;
+	scrollbar-width: thin;
+	height: 100%;
+	display: grid;
+	grid-auto-rows: min-content;
+	gap: 5px;
+	padding: 5px 5px 0px 15px;
+	flex: 1 1 auto;
+}
+.transaction-item {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	grid-template-columns: 50% 1fr 12%;
+	min-height: 2rem;
+	width: 100%;
+	box-shadow: 0 1px 4px rgb(0 0 0 / 20%);
+	border-radius: 8px;
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+}
+.transaction-item:hover {
+	transform: translate(0, -3px);
+	box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
+}
+.transaction-description {
+	display: flex;
+	align-items: center;
+	padding: 2px 0 2px 10px;
+}
+.transaction-description,
+.transaction-amount {
+	font-size: 0.9rem;
+}
+.transaction-amount {
+	text-align: right;
+	padding-right: 2px;
+}
+.border-handle {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	justify-content: flex-end;
+	align-items: center;
+}
+.transaction-border-outer {
+	width: 10px;
+	height: 100%;
+	margin-left: -7px;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+.transaction-border-outer.expense {
+	background-color: #cc0000;
+}
+.transaction-border-outer.income {
+	background-color: #007e00;
+}
+.transaction-border-inner {
+	height: 100%;
+	width: 8px;
+	background-color: white;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	margin-left: -1%;
+	z-index: 1;
+}
+.item-remove-button {
+	border: none;
+	color: transparent;
+	background-color: transparent;
+	z-index: 2;
+}
+.transaction-item:hover .item-remove-button {
+	color: #cc0000;
+}
+.item-remove-button:hover {
+	background-color: #ffcccc;
+}
+.item-remove-button:active {
+	background-color: #ff8888;
+}
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+form {
+	padding-right: 1rem;
+}
+.bottom-section-section > form label {
+	font-weight: bold;
+	opacity: 0.9;
+}
+#transaction-description {
+	margin-bottom: 15px;
+}
+.bottom-section-section > form input {
+	width: 100%;
+	padding: 4px;
+	border: thin solid rgb(0 0 0 / 15%);
+	border-radius: 4px;
+}
+.bottom-section-section > form p {
+	color: rgb(0 0 0 / 50%);
+	font-size: 0.7rem;
+	margin-top: 4px;
+}
+input[type="submit"] {
+	background-color: #22c76f;
+	color: white;
+	font-weight: bold;
+	border: none;
+	height: 30px;
+}
+input[type="submit"]:hover {
+	background-color: #169e56;
+	transform: scale(1.01);
+}
+input[type="submit"]:active {
+	background-color: #22c76f;
+	transform: scale(1);
+}

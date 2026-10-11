@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Expense Tracker</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1 id="main-title">Expense Tracker</h1>
+      <div id="overall-section">
+        <p id="overall-balance-label">Your Balance</p>
+        <h1 id="overall-balance-value"></h1>
+        <div id="income-expense-div-cont">
+          <div class="income-expense-div income">
+            <p class="income-expense-label income">Income</p>
+            <h2 class="income-expense-value income" id="income-value"></h2>
+          </div>
+          <div class="income-expense-div expense">
+            <p class="income-expense-label expense">Expenses</p>
+            <h2 class="income-expense-value expense" id="expense-value"></h2>
+          </div>
+        </div>
+      </div>
+      <div id="bottom-section">
+        <div class="bottom-section-cont">
+          <h3>Transactions</h3>
+          <div class="bottom-section-section" id="transaction-section">
+            <ul id="transaction-list"></ul>
+          </div>
+        </div>
+        <div class="bottom-section-cont">
+          <h3>Add Transaction</h3>
+          <div class="bottom-section-section" id="add-transaction-section">
+            <form>
+              <div>
+                <label for="transaction-description">Description <br /></label>
+                <input
+                  type="text"
+                  name="description"
+                  required
+                  value=""
+                  placeholder="Enter description..."
+                  id="transaction-description"
+                /><br />
+                <label for="transaction-amount">Amount <br /></label>
+                <input
+                  type="number"
+                  name="amount"
+                  required
+                  value=""
+                  placeholder="Enter amount..."
+                  id="transaction-amount"
+                />
+                <p id="amount-extra-detail">Use negative (-) for expenses</p>
+              </div>
+              <input
+                type="submit"
+                value="Add Transaction"
+                id="form-submit-btn"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
