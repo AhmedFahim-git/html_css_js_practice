@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Password Generator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Password Generator</h1>
+      <div class="password-copy-div">
+        <div id="password">pswd</div>
+        <button type="button" id="copy-btn" title="Copy to clipboard">
+          <i id="copy-icon" class="fa-regular fa-copy"></i>
+        </button>
+      </div>
+      <div class="input-params">
+        <div class="slider-input">
+          <label for="password-length">Password Length</label>
+          <input
+            type="range"
+            min="6"
+            max="24"
+            step="1"
+            name="password-length"
+            id="password-length"
+            value="12"
+          />
+          <div id="password-length-show">20</div>
+        </div>
+        <div class="checkbox-input">
+          <label for="uppercase-include">Include Uppercase</label>
+          <input
+            type="checkbox"
+            id="uppercase-include"
+            name="uppercase"
+            checked
+          />
+        </div>
+        <div class="checkbox-input">
+          <label for="lowercase-include">Include Lowercase</label>
+          <input
+            type="checkbox"
+            id="lowercase-include"
+            name="lowercase"
+            checked
+          />
+        </div>
+        <div class="checkbox-input">
+          <label for="number-include">Include Numbers</label>
+          <input type="checkbox" id="number-include" name="number" checked />
+        </div>
+        <div class="checkbox-input">
+          <label for="symbols-include">Include Symbols</label>
+          <input type="checkbox" id="symbols-include" name="symbols" />
+        </div>
+      </div>
+      <button id="generate-pswd-btn" type="button">
+        <i class="fa-solid fa-key"></i> Generate Password
+      </button>
+      <div class="password-strength-div">
+        <div class="password-strength-texts">
+          <span> Password Strength: </span>
+          <span id="pswd-strength-text">Medium</span>
+        </div>
+        <div class="password-strength-container">
+          <div id="password-strength-indicator"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
